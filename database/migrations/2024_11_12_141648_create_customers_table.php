@@ -11,10 +11,8 @@ return new class extends Migration
         Schema::create('customers', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            // Add other customer fields as needed (e.g., email, address, etc.)
-            $table->unsignedBigInteger('region_id'); // Foreign key to regions table
+            $table->unsignedBigInteger('region_id');
             $table->timestamps();
-
             $table->foreign('region_id')->references('id')->on('regions');
         });
     }
