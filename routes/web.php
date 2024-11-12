@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Master\KategoriController;
 use App\Http\Controllers\Transaksi\ContentController;
+use App\Http\Controllers\RegionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,4 @@ Route::match(['get','post'],'/welcome', [HomeController::class, 'selamatDatang']
 Route::get('sampai', [HomeController::class, 'sampaiJumpa'])->name('sampai');
 Route::resource('kategori', KategoriController::class);
 Route::get('listcontent', [ContentController::class, 'index']);
+Route::resource('regions', RegionController::class);
